@@ -42,7 +42,7 @@
     
     EE.onScrollTop = function(callback, externalCallbackName){
       if(typeof externalCallbackName === 'undefined')
-        externalCallbackName = 'enablerOnScrollTopChanged';
+        externalCallbackName = 'enablerOnScrollTop';
       function scrollTopMessageRecieved(event) {
         if (typeof event.data != 'undefined' && typeof event.data.scrollTop !== 'undefined') {
           var scrollTop = event.data.scrollTop;
@@ -79,7 +79,7 @@
     
     EE.onDeviceOrientation = function(callback, externalCallbackName){
       if(typeof externalCallbackName === 'undefined')
-          externalCallbackName = 'enablerOnDeviceOrientationChanged';
+          externalCallbackName = 'enablerOnDeviceOrientation';
       var externalJs = [
         'var onDeviceOrientation = function(e){',
           'var frame = document.getElementById("' + EE.getDartAssetId() + '.if")',
